@@ -1,0 +1,8 @@
+        case .addSticker(let sticker):
+            newCollage.stickers.append(sticker)
+            
+        case .changeSticker(let action, id: let id):
+            newCollage = changeSticker(action, id: id, in: newCollage)
+        switch action {
+        case .tap(let point):
+            newState = onTap(point, in: newState)
